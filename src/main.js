@@ -1,0 +1,15 @@
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import { createPinia } from 'pinia'
+import './mock'
+// 导入全局样式（关键：让全局样式生效）
+import './assets/css/global.css'
+
+const app = createApp(App)
+const pinia = createPinia()
+
+app.use(router)
+app.use(pinia)
+
+app.mount('#app')
